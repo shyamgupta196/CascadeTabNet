@@ -32,7 +32,12 @@ CascadTabNet is an automatic table recognition method for interpretation of tabu
 pip install -q mmcv terminaltables
 git clone --branch v1.2.0 'https://github.com/open-mmlab/mmdetection.git'
 cd "mmdetection"
-pip install -r "/content/mmdetection/requirements/optional.txt"
+pip install -r requirements/optional.txt
+
+  #### Pytorch CUDA version
+pip install torch==1.4.0+cu100 torchvision==0.5.0+cu100 -f https://download.pytorch.org/whl/torch_stable.html
+  #### setup will work only when pytorch is installed 
+
 python setup.py install
 python setup.py develop
 pip install -r {"requirements.txt"}
@@ -45,10 +50,6 @@ pip install mmcv==0.4.3
 PyTorch = 1.4.0<br>
 Torchvision = 0.5.0<br>
 Cuda = 10.0<br>
-
-<pre>
-pip install torch==1.4.0+cu100 torchvision==0.5.0+cu100 -f https://download.pytorch.org/whl/torch_stable.html
-</pre>
 
 **If you are using Google Colaboratory (Colab), Then you need add**
 ```
